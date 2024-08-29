@@ -23,20 +23,20 @@ How to use this model:
         - We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}
         - Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: edges = [(0,1), (1,3), (0,2), (2,3)]
         - We create the graph as follows: 
-            from covid19_supermarket_abm.utils.create_store_network import create_store_network
-            G = create_store_network(pos, edges)
+            - from covid19_supermarket_abm.utils.create_store_network import create_store_network
+            - G = create_store_network(pos, edges)
         - To visualize your network, you can use nx.draw_networkx:
-            import networkx as nx
-            nx.draw_networkx(G, pos=pos, node_color='y')
+            - import networkx as nx
+            - nx.draw_networkx(G, pos=pos, node_color='y')
         - To create a one-way setup, simply use directed=True: G = create_store_network(pos, edges, directed=True) 
 
     c. Path generator and Args
         - In this model, we used the synthetic_path_gen.py to create 1,000,000 full shopping trips. The shopping trips is named as 10^6.json (or 10^6_DIRECTIONAL.json if you uncommented it within the file).
         - Then in the simulation proper, in main.py, we used the function:
-        path_generator_function, path_generator_args = get_path_generator(path_generation='empirical', full_paths=full_paths) 
-        to generate the path generator (path_generator_function) and the arguments for it (path_generator_args)
+        - path_generator_function, path_generator_args = get_path_generator(path_generation='empirical', full_paths=full_paths) 
+        - to generate the path generator (path_generator_function) and the arguments for it (path_generator_args)
     
-3. Working with results
+4. Working with results
     - The model results are stored in results which is a dictionary tuple with 3 elements.
         - First element is a dataframe with most simulation metrics:
             - num_cust 	Total number of customers
