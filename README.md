@@ -1,3 +1,5 @@
+Disclaimer: This is the official source code that I submitted for my Undergraduate Special Problem in BC Computer Science at the University of the Philippines Baguio. I attached the actual paper for my study as a reference. 
+
 Modelling COVID-19 in Palengkes: An Agent-based Case Study of Baguio City's Public Market
 Author: Lanchelot Domagsang Lucero
 
