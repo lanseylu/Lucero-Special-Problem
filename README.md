@@ -5,19 +5,19 @@ Author: Lanchelot Domagsang Lucero
 
 How to use this model:
 1. Getting started
-    a. Open cmd, write and execute the ff code: pip install covid19-supermarket-abm
-    b. This package requires Python >= 3.6
+    - Open cmd, write and execute the ff code: pip install covid19-supermarket-abm
+    - This package requires Python >= 3.6
 
 2. Running experiments
     The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
-    a. Config file:
-        * arrival_rate - rate at which buyers arrive at the markets
-        * traversal_time - average time of a buyer per node in the markets
-        * num_hours_open - market's operation num_hours_open
-        * infection_proportion - the proportion of buyers infected in the market
-        * max_customers_in_store - max. number of buyers allowed in the market (optional)
-        * with_node_capacity - true if a node can only have a defined max. of buyers allowed per node (optional)
-        * node_capacity - defined number of max. no. of buyers allowed per node in the market
+    - Config file:
+        - arrival_rate - rate at which buyers arrive at the markets
+        - traversal_time - average time of a buyer per node in the markets
+        - num_hours_open - market's operation num_hours_open
+        - infection_proportion - the proportion of buyers infected in the market
+        - max_customers_in_store - max. number of buyers allowed in the market (optional)
+        - with_node_capacity - true if a node can only have a defined max. of buyers allowed per node (optional)
+        - node_capacity - defined number of max. no. of buyers allowed per node in the market
 
     b. Graph G
         * We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}
