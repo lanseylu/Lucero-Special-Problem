@@ -60,3 +60,5 @@ References:
 F. Ying and N. O’Clery, Modelling covid-19 transmission in super-
 markets using an agent-based model, PLOS ONE, 16 (2021), p. e0249821.
 doi:http://10.1371/journal.pone.0249821.
+
+The original source code belongs to F. Ying. I adjusted the code and config based on the specifics of my study. You can find it here: https://github.com/fabianying/covid19-supermarket-abm
