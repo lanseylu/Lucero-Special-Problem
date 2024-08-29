@@ -6,9 +6,8 @@ How to use this model:
     - Open cmd, write and execute the ff code: pip install covid19-supermarket-abm
     - This package requires Python >= 3.6
 
-2. Running experiments
-    1. The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
-        1. Config file:
+2. Running experiments. The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
+   1. Config file:
         1. `arrival_rate` - rate at which buyers arrive at the markets
         2. `traversal_time` - average time of a buyer per node in the markets
         3. `num_hours_open` - market's operation num_hours_open
