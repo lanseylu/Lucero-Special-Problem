@@ -7,7 +7,7 @@ How to use this model:
     - This package requires Python >= 3.6
 
 2. Running experiments
-    The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
+    1. The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
     - Config file:
         - arrival_rate - rate at which buyers arrive at the markets
         - traversal_time - average time of a buyer per node in the markets
@@ -17,7 +17,7 @@ How to use this model:
         - with_node_capacity - true if a node can only have a defined max. of buyers allowed per node (optional)
         - node_capacity - defined number of max. no. of buyers allowed per node in the market
 
-    b. Graph G
+    2. Graph G
         1. We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` <br>
         2. Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]` <br>
         3. We create the graph as follows: <br>
@@ -29,7 +29,7 @@ How to use this model:
         5. To create a one-way setup, simply use <br>
              `directed=True: G = create_store_network(pos, edges, directed=True) `
 
-    c. Path generator and Args
+    3. Path generator and Args
         - In this model, we used the synthetic_path_gen.py to create 1,000,000 full shopping trips. The shopping trips is named as 10^6.json (or 10^6_DIRECTIONAL.json if you uncommented it within the file).
         - Then in the simulation proper, in main.py, we used the function:
           `path_generator_function, path_generator_args = get_path_generator(path_generation='empirical', full_paths=full_paths)`
