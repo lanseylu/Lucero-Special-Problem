@@ -1,5 +1,6 @@
-> Modelling COVID-19 in Palengkes: An Agent-based Case Study of Baguio City's Public Market
-> Author: Lanchelot Domagsang Lucero
+Modelling COVID-19 in Palengkes: An Agent-based Case Study of Baguio City's Public Market
+
+Author: Lanchelot Domagsang Lucero
 
 How to use this model:
 1. Getting started
