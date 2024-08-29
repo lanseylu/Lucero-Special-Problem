@@ -17,7 +17,7 @@ How to use this model:
         - `node_capacity` - defined number of max. no. of buyers allowed per node in the market
 
     2. Graph G
-        - We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` 
+        - We use `networkx package` to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` 
         - Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]` 
         - We create the graph as follows:
             `from covid19_supermarket_abm.utils.create_store_network import create_store_network` 
@@ -54,7 +54,7 @@ How to use this model:
             - `exposure_times`	List of exposure times of customers (only recording positive exposure times)
         - The second element gives the number of encounters or contacts per node
         - Third element is a dataframe containing the exposure time per node
-    b. In the model, we list all used shopping trips by buyers across the 1000 simulations to all_buyer_paths.txt to help with processing the average number of unique buyers per node in our study (which is around 2 million paths). Between simulations, a string called "Market closed." is indicated. 
+    b. In the model, we list all used shopping trips by buyers across the 1000 simulations to `all_buyer_paths.txt` to help with processing the average number of unique buyers per node in our study (which is around 2 million paths). Between simulations, a string called "Market closed." is indicated. 
 
 References:
 F. Ying and N. O’Clery, Modelling covid-19 transmission in supermarkets using an agent-based model, PLOS ONE, 16 (2021), p. e0249821. doi:http://10.1371/journal.pone.0249821.
