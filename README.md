@@ -8,25 +8,25 @@ How to use this model:
 
 2. Running experiments
     1. The model has four main inputs, a config file, a graph G, a path generator, and the arguments for the path generator.
-    - Config file:
-        - arrival_rate - rate at which buyers arrive at the markets
-        - traversal_time - average time of a buyer per node in the markets
-        - num_hours_open - market's operation num_hours_open
-        - infection_proportion - the proportion of buyers infected in the market
-        - max_customers_in_store - max. number of buyers allowed in the market (optional)
-        - with_node_capacity - true if a node can only have a defined max. of buyers allowed per node (optional)
-        - node_capacity - defined number of max. no. of buyers allowed per node in the market
+        1. Config file:
+        1. `arrival_rate` - rate at which buyers arrive at the markets
+        2. `traversal_time` - average time of a buyer per node in the markets
+        3. `num_hours_open` - market's operation num_hours_open
+        4. `infection_proportion` - the proportion of buyers infected in the market
+        5. `max_customers_in_store` - max. number of buyers allowed in the market (optional)
+        6. `with_node_capacity` - true if a node can only have a defined max. of buyers allowed per node (optional)
+        7. `node_capacity` - defined number of max. no. of buyers allowed per node in the market
 
     2. Graph G
-        1. We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` <br>
-        2. Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]` <br>
-        3. We create the graph as follows: <br>
-            `from covid19_supermarket_abm.utils.create_store_network import create_store_network` <br>
-            `G = create_store_network(pos, edges)` <br>
+        1. We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` 
+        2. Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]` 
+        3. We create the graph as follows:
+            `from covid19_supermarket_abm.utils.create_store_network import create_store_network` 
+            `G = create_store_network(pos, edges)` 
         4. To visualize your network, you can use nx.draw_networkx:
-            `import networkx as nx` <br>
-            `nx.draw_networkx(G, pos=pos, node_color='y')` <br>
-        5. To create a one-way setup, simply use <br>
+            `import networkx as nx` 
+            `nx.draw_networkx(G, pos=pos, node_color='y')`
+        5. To create a one-way setup, simply use
              `directed=True: G = create_store_network(pos, edges, directed=True) `
 
     3. Path generator and Args
