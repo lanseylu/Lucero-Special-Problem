@@ -18,15 +18,15 @@ How to use this model:
         - node_capacity - defined number of max. no. of buyers allowed per node in the market
 
     b. Graph G
-        * We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}`
-        * Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]`
-        * We create the graph as follows: 
-            `from covid19_supermarket_abm.utils.create_store_network import create_store_network`
-            `G = create_store_network(pos, edges)`
-        * To visualize your network, you can use nx.draw_networkx:
-            `import networkx as nx`
-            `nx.draw_networkx(G, pos=pos, node_color='y')`
-        * To create a one-way setup, simply use
+        - We use networkx package to create the market network. First, we need to specify the (x,y) coordinates of each node. So in a very simple example, we have four nodes, arranged in a square at with coordinates (0,0), (0,1), (1,0), and (1,1). we code this as: `pos = {0: (0,0), 1: (0,1), 2: (1,0), 3: (1,1)}` <br>
+        - Next, we need to specify the edges in the network; in other words, which nodes are connected to each other.We code this as: `edges = [(0,1), (1,3), (0,2), (2,3)]` <br>
+        - We create the graph as follows: <br>
+            `from covid19_supermarket_abm.utils.create_store_network import create_store_network` <br>
+            `G = create_store_network(pos, edges)` <br>
+        - To visualize your network, you can use nx.draw_networkx:
+            `import networkx as nx` <br>
+            `nx.draw_networkx(G, pos=pos, node_color='y')` <br>
+        - To create a one-way setup, simply use <br>
              `directed=True: G = create_store_network(pos, edges, directed=True) `
 
     c. Path generator and Args
